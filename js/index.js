@@ -7,13 +7,13 @@ function updateSubtotal(product) {
 
   //step 1: use DOM manipulation to get the elements that hold price and quantity
   const price = product.querySelector('.price span');
-  // console.log(price);
+  
   const quantity = product.querySelector('.quantity input');
 
 
   // step 2: extract the specific values from the previous elements (price and quantity)
   const priceValues = Number(price.innerHTML);
-  //console.log(typeof priceValues);
+  
   const quantityValues = quantity.value;
 
   // step 3 + 4:get the subtotal element using DOM manipulation then calculate the subtotal price
@@ -60,7 +60,7 @@ function createProduct() {
   let productText = document.querySelector('.create-product input[type="text"]').value;
   let productNumber = document.querySelector('.create-product input[type="number"]').value;
   let productTable = document.querySelector('tbody');
-  // let tableSection = document.querySelector('.product');
+  
   let newRow = document.createElement('tr');
   newRow.classList.add('product');
   productTable.appendChild(newRow);
@@ -97,7 +97,7 @@ window.addEventListener('load', () => {
 function removeButton() {
   // Remove Button
   const removeButtons = document.querySelectorAll('.btn-remove');
-  // console.log(removeButtons);
+ 
   for (let button of removeButtons) {
     console.log(button);
     button.addEventListener('click', removeProduct);
